@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Syne:wght@600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-fixed": "#f0dbff", "surface-container-low": "#faf0ff", "surface-container-high": "#f0e4f8", "on-tertiary-fixed": "#002114", "outline": "#7e7386", "on-primary-fixed-variant": "#6800b4", "surface-dim": "#e1d6ea", "primary": "#7800ce", "surface": "#fff7ff", "tertiary-fixed-dim": "#45dfa4", "on-secondary-fixed": "#3d0026", "on-tertiary-fixed-variant": "#005137", "inverse-surface": "#342e3d", "on-secondary-container": "#76014e", "primary-fixed-dim": "#ddb8ff", "on-surface": "#1f1927", "secondary-container": "#fc79bd", "secondary-fixed-dim": "#ffafd3", "on-tertiary-container": "#a3ffd2", "secondary": "#a43073", "surface-bright": "#fff7ff", "inverse-primary": "#ddb8ff", "secondary-fixed": "#ffd8e7", "on-tertiary": "#ffffff", "on-primary-container": "#f6e6ff", "primary-container": "#9333ea", "on-surface-variant": "#4d4354", "background": "#fff7ff", "error": "#ba1a1a", "on-primary": "#ffffff", "on-secondary-fixed-variant": "#85145a", "surface-tint": "#861fdd", "error-container": "#ffdad6", "outline-variant": "#cfc2d7", "surface-container-lowest": "#ffffff", "on-error": "#ffffff", "surface-variant": "#eadef2", "tertiary-container": "#007a55", "on-secondary": "#ffffff", "on-primary-fixed": "#2c0051", "tertiary-fixed": "#68fcbf", "tertiary": "#005f41", "on-error-container": "#93000a", "on-background": "#1f1927", "surface-container": "#f6eafe", "surface-container-highest": "#eadef2", "inverse-on-surface": "#f8edff" }, borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" }, spacing: { "gutter-desktop": "2rem", "space-sm": "0.5rem", "space-md": "1rem", "space-xl": "2.5rem", "gutter": "1rem", "margin": "1rem", "space-lg": "1.5rem", "space-xs": "0.25rem", "margin-desktop": "3.5rem", "gutter-tablet": "1.5rem", "margin-tablet": "2rem" }, fontFamily: { "body-md": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-md": ["Syne"], "label-lg": ["Plus Jakarta Sans"], "title-md": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Syne"], "display-hero": ["Syne"], "headline-sm": ["Syne"], "headline-lg": ["Syne"], "label-md": ["Plus Jakarta Sans"], "title-lg": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "display-hero-mobile": ["Syne"], "body-sm": ["Plus Jakarta Sans"] }, fontSize: { "body-md": ["14px", { "lineHeight": "22px", "fontWeight": "400" }], "body-lg": ["16px", { "lineHeight": "26px", "fontWeight": "400" }], "headline-md": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "label-lg": ["14px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "700" }], "title-md": ["16px", { "lineHeight": "22px", "fontWeight": "600" }], "headline-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }], "display-hero": ["56px", { "lineHeight": "64px", "letterSpacing": "-0.03em", "fontWeight": "800" }], "headline-sm": ["22px", { "lineHeight": "28px", "fontWeight": "600" }], "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700" }], "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.03em", "fontWeight": "700" }], "title-lg": ["18px", { "lineHeight": "24px", "fontWeight": "700" }], "label-sm": ["10px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "800" }], "display-hero-mobile": ["36px", { "lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "800" }], "body-sm": ["12px", { "lineHeight": "18px", "fontWeight": "400" }] } } } }</script><style>@layer base{html,body{width:100%;margin:0;padding:0;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(147,51,234,0.06)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="Aura Bloom Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1W1XygWCTbHmOkEZjL_jYrcss_xW-9Y21DzhorLtJz1ERmOK25utlZ1sNFW7HH39uIYua44cS3ZCSpSyFjC03KNnQNuXPEtmaVmPp1jI4XvKH-051Bx3l0p8tsQUsAwGI5EwnJd9Cn-hjP08z_FAb3C2_7kH3IflFDAiP5GSq3FUS4A_rWEeqSFXEEM2Z6Ro6IMGjbhsgDkU31vCzlUgvBW8Xi1wA311H5XorsXDsfv15904jTtVSMDbLJT"/><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">Aura Bloom</span><span class="hidden">Inicio</span></div><div class="flex items-center gap-space-xs"><button class="w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">search</span></button><button class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-secondary transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">favorite</span><span class="absolute top-2 right-2 min-w-[16px] h-4 px-1 rounded-full bg-secondary text-on-secondary font-label-sm text-[10px] flex items-center justify-center leading-none">3</span></button><button class="relative w-11 h-11 flex items-center justify-center rounded-full text-on-surface-variant hover:text-primary transition-colors active:scale-95"><span class="material-symbols-outlined text-[22px]">shopping_bag</span><span class="absolute top-2 right-2 min-w-[16px] h-4 px-1 rounded-full bg-primary-container text-on-primary font-label-sm text-[10px] flex items-center justify-center leading-none">2</span></button><div class="w-11 h-11 flex items-center justify-center pl-space-xs"><img alt="Profile" class="w-8 h-8 rounded-full object-cover shadow-[0_2px_8px_rgba(147,51,234,0.15)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfXPTTldm_FAGK7Za0R6aLWpYyhIu9NI-GAb4tnEzLiy2WQMWpQpdgg061nfTL2HTntCC4ddy0SvTw56DFbmU98aKxm7Q5GTrG_j8c3G0qfZlbizYSs3We2mQeo2JmydChKeTwl5LWswwJ6l-yLFTces2BOwBzuH_3CFHygvwtKhYZpWWViCL7G3XPGH-0nrYukG8Nm1abc3sIMAQ6bQseXIK1kOvUs61ylRzzUXFHYmVejNWk20GIeA"/></div></div></div></header><main class="flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- 1. Top Announcement Marquee -->
+<div class="w-full bg-primary-fixed text-on-primary-fixed py-2 px-margin overflow-hidden flex items-center justify-between shadow-sm">
+<div class="flex items-center gap-space-xs animate-pulse mx-auto">
+<span class="material-symbols-outlined text-[16px] text-secondary">local_florist</span>
+<p class="font-label-sm text-label-sm font-semibold tracking-wide text-center">
+        🌸 20% OFF en tu primer pedido: <span class="underline decoration-wavy decoration-secondary text-primary font-bold">BLOOM20</span> • Envío gratis desde $45
+      </p>
+</div>
+</div>
+<div class="flex flex-col gap-space-lg px-margin mt-space-md">
+<!-- 2. Hero Section Vibrante y Juvenil -->
+<div class="relative w-full rounded-xl bg-gradient-to-b from-surface-container to-surface-container-low p-space-md overflow-hidden shadow-md">
+<!-- Decorative Pastel Glow Orbs -->
+<div class="absolute -top-10 -right-10 w-44 h-44 rounded-full bg-secondary-fixed/50 blur-2xl pointer-events-none"></div>
+<div class="absolute -bottom-8 -left-8 w-36 h-36 rounded-full bg-tertiary-fixed/40 blur-xl pointer-events-none"></div>
+<!-- Live badge -->
+<div class="relative z-10 inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface/90 backdrop-blur-md shadow-sm mb-space-sm">
+<span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">🔥 +500 Nuevos Drops esta semana</span>
+</div>
+<!-- Main Headline -->
+<div class="relative z-10 flex flex-col gap-1 mb-space-md">
+<h1 class="font-display-hero-mobile text-display-hero-mobile text-on-surface tracking-tight leading-tight">
+          Tu vibra, <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary-container">
+            tu estilo ✨
+          </span>
+</h1>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-[90%]">
+          Moda pastel, estética Y2K suave y básicos etéreos creados para encajar con todo tu mood diario.
+        </p>
+</div>
+<!-- Hero Visual Lookbook Collage -->
+<div class="relative z-10 w-full h-72 rounded-lg overflow-hidden shadow-lg mb-space-md group">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Editorial candid photography of a trendy stylish Gen Z young woman laughing outdoors wearing a soft lavender fluffy knit cardigan over a pastel butter crop top and relaxed pleated pink trousers. Soft dreamy afternoon pastel sunlight, modern boutique aesthetic with soft mint greenery background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9uHeVixeAGZBm8pRV-PiM1TaFmj5j4tnkLhGhkbJazYi6nDgTPSkYChy6yQB1SAcunAjBL2g8QhGAyTwh2NcvQQOUt9eSGtRHwiLLMuZGx3ZeHCW2C0N3CA3U7rtZDbpgsfPwfEs61XbI-2IGVoZCdK53nubm2_GXaO26yClxRBP15sxqoMbkdl9Ct6mJ61Y6MShjEoLcMiTZejrhjxeFI-Qzg4GSrJTSsKzTVlxSHTeX9uR6AU-S-Q"/>
+<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent flex items-end p-space-md">
+<div class="bg-surface/85 backdrop-blur-md px-3 py-1.5 rounded-full flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label-sm text-label-sm font-bold text-on-surface">Edición Primavera Cloud '25</span>
+</div>
+</div>
+</div>
+<!-- CTA Buttons Row -->
+<div class="relative z-10 flex flex-col sm:flex-row gap-space-xs">
+<button class="w-full py-3.5 px-space-md rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-md hover:bg-primary active:scale-[0.98] transition-all">
+<span>Explorar Nueva Colección</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<button class="w-full py-3.5 px-space-md rounded-full bg-surface-container-highest text-on-surface font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-surface-variant active:scale-[0.98] transition-all">
+<span class="material-symbols-outlined text-[18px] text-secondary">flare</span>
+<span>Ver Drop Semanal</span>
+</button>
+</div>
+</div>
+<!-- 3. Carrusel de Categorías en Tendencia -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Categorías en Tendencia</h2>
+<a class="font-label-sm text-label-sm text-primary font-bold hover:underline flex items-center gap-0.5" href="#">
+          Ver todas <span class="material-symbols-outlined text-[14px]">chevron_right</span>
+</a>
+</div>
+<!-- Horizontal Scrollable Category Chips -->
+<div class="flex gap-space-sm overflow-x-auto pb-space-xs -mx-margin px-margin scrollbar-none" id="categories-carousel">
+<!-- Cat 1 -->
+<button class="flex flex-col items-center gap-2 min-w-[84px] focus:outline-none group" onclick="selectCategory(this)">
+<div class="w-20 h-20 rounded-full p-0.5 bg-gradient-to-tr from-primary to-secondary-container shadow-sm group-active:scale-95 transition-all">
+<img class="w-full h-full object-cover rounded-full" data-alt="Aesthetic closeup of soft pastel baby tees folded neatly with small embroidered butterfly logo on soft lilac and baby pink cotton fabric studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo6g2wwZ8zu4tbMG2RkfghDTJy-fh_eJFoejWXLYaw0D6ciFJN6yKBOqLwuw3gWQG_tL2ugNr1et8DupXkJGyC23XYOd1cICgFaJZGUCEBznZl1Hc3iAh_fyfBuCxv4fDCq0P4Qm8T3Urr23aCBasB792r2yj4EIejKdKVMtjOHFMeFyCjsZfFgKVZXsv5EAYep8gNzKXURA6yjRYtQndA21muRmfxGaaezGDsd3pVS-arDkxi9MG7mg"/>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface font-bold line-clamp-1">Baby Tees</span>
+</button>
+<!-- Cat 2 -->
+<button class="flex flex-col items-center gap-2 min-w-[84px] focus:outline-none group" onclick="selectCategory(this)">
+<div class="w-20 h-20 rounded-full p-0.5 bg-surface-variant group-hover:bg-primary-fixed shadow-sm group-active:scale-95 transition-all">
+<img class="w-full h-full object-cover rounded-full" data-alt="Fashion shot of pastel mint green parachute baggy pants and cream cargo trousers with stylish drawstrings on a soft studio beige floor." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEQAL5HbM6LU7F4qJ3QYnF93j2-wDjoQs4-UeeeRboaO7uoQpulWqkP83l-l5xAg190Hd9IlSaJn0y8Hr_rHzPhDr6Hn180ZUhnf-10ZJfLRWGtjhlI7sP0VwWHX6cvwIx3k1tVb5fDTy5GzJDyxMedM6YRNZoGKh6d7Dyu8zmP2G4mjoU9wJHVySptrhKwljn9MJabh5Us_MTgnehyeiDBIAFS6qNiahDyEGnAj99e5tJnsdOMG_DKw"/>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface font-medium line-clamp-1">Pantalones Cargo</span>
+</button>
+<!-- Cat 3 -->
+<button class="flex flex-col items-center gap-2 min-w-[84px] focus:outline-none group" onclick="selectCategory(this)">
+<div class="w-20 h-20 rounded-full p-0.5 bg-surface-variant group-hover:bg-primary-fixed shadow-sm group-active:scale-95 transition-all">
+<img class="w-full h-full object-cover rounded-full" data-alt="Dreamy coquette pastel dress with delicate soft pink bows and lace trim, ethereal fairycore fashion aesthetic soft lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNOnwvYooF2alFcWeN-skpyc0W1NCXm7ZwMOrh3A1FSTlwbqqB0wXrSYLqrYPKRSJpzz20wn7XVakjfGygXOJv17V9JXPYd-73B87i5oknsVcEK5hVKhpfoQu3e41Url7jSaYzSedgI_ngRtQUtMDcpoSkczDlNYunMHDOpiYcVhvSqufwPRI6Ltlpg9VLgJWsj3SFJTk_F9ebrHtqVZkoNkh7lTWJneswU82plDsCA241nd-UNd185w"/>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface font-medium line-clamp-1">Vestidos Coquette</span>
+</button>
+<!-- Cat 4 -->
+<button class="flex flex-col items-center gap-2 min-w-[84px] focus:outline-none group" onclick="selectCategory(this)">
+<div class="w-20 h-20 rounded-full p-0.5 bg-surface-variant group-hover:bg-primary-fixed shadow-sm group-active:scale-95 transition-all">
+<img class="w-full h-full object-cover rounded-full" data-alt="Cozy oversized lavender fleece hoodie with bubbly cute pastel screenprint typography on a minimalist hanger aesthetic studio." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdZN4jduHhThZYdo78t5C1YrNwZkwUsdQ5-x6JY6_UPiwuTmoKGub_lEPl1GdUCFtGEa7gw-C4mUTLg8H7HRg8atFz_KVZAv1idwdMr-zzOW3-5sqOG3mOjoQOLs4RBo10oL45dQ7vhXhCoUs_uESDD5Y0_HyCCEVw19JpXLQ5uE8tbrTwbkVjOIeP0XbUVfRQ4bdkiw2TsHf0OEGZZrAhX1ZVvKOE304naACgfGPnm7j8DrjEiWWzyg"/>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface font-medium line-clamp-1">Hoodies Chill</span>
+</button>
+<!-- Cat 5 -->
+<button class="flex flex-col items-center gap-2 min-w-[84px] focus:outline-none group" onclick="selectCategory(this)">
+<div class="w-20 h-20 rounded-full p-0.5 bg-surface-variant group-hover:bg-primary-fixed shadow-sm group-active:scale-95 transition-all">
+<img class="w-full h-full object-cover rounded-full" data-alt="Chunky platform sneakers in pastel color block lavender, mint cream, and baby pink with fluffy bubble laces fashion footwear shot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmZAsa7KqihQSYxL97E5bm1Hr3V5fzRIGpbc6FHhRT_9r2lGF8XWzA9mNWuCKE9ri0hGAwXxyzFgssS8Xug6D61nsMU07lAX2aMyCoBrTVEBd8Nz_RwUtNSfRQoUh3ISDxtFlWziFHCDJ3gkbybM8pjLQemYZJ11sSazXzrRCT2bdIBAMT19Wpz3coM8R8hlK4qP9EKQ1bOFHsl6DReFogjsCNZ1GAjEjJWxox4gDuZY1IZKTBD2MO0g"/>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface font-medium line-clamp-1">Sneakers Chunky</span>
+</button>
+<!-- Cat 6 -->
+<button class="flex flex-col items-center gap-2 min-w-[84px] focus:outline-none group" onclick="selectCategory(this)">
+<div class="w-20 h-20 rounded-full p-0.5 bg-surface-variant group-hover:bg-primary-fixed shadow-sm group-active:scale-95 transition-all">
+<img class="w-full h-full object-cover rounded-full" data-alt="Cute Y2K pastel micro shoulder bag in glossy patent mint green with metallic silver heart charm on draped silky fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfrnj_iJyAEUlvwKfwCuBJf-2_vPk4qaSHWtLe1nuQ1vWAyMTQ-f3ZAkXmZuFirZKhh_XKGfqALePJU7T9b04DRK5Do4lk8J04RlwBmINspyF-2LpKztmlZsEFPKIzljENh0IS9V5jBUp5R56nJnfdvqQJwU1_VrnJx-QUGFKeQpcEqPuz7YQ8TnJ34WRl_Z47LIuXDWx8r39LfHeOYnrYrtFb3qCdjPUw7FIldkq9YJ32z_D4jvqUxw"/>
+</div>
+<span class="font-label-sm text-label-sm text-center text-on-surface font-medium line-clamp-1">Mini Bags</span>
+</button>
+</div>
+</div>
+<!-- 4. Drops & Novedades (Carrusel de Productos Detallados) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Recién Llegados</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Drops Exclusivos ⚡</h2>
+</div>
+<div class="flex gap-1">
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="scrollCarousel('products-row', -260)">
+<span class="material-symbols-outlined text-[18px]">chevron_left</span>
+</button>
+<button class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-on-surface hover:bg-surface-container-high transition-colors" onclick="scrollCarousel('products-row', 260)">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+<!-- Horizontal Cards Scroll -->
+<div class="flex gap-space-md overflow-x-auto pb-space-sm -mx-margin px-margin scroll-smooth scrollbar-none" id="products-row">
+<!-- Product Card 1 -->
+<div class="min-w-[260px] max-w-[260px] bg-surface-container-lowest rounded-xl p-space-sm shadow-md flex flex-col justify-between group">
+<!-- Image Container -->
+<div class="relative w-full h-64 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Front editorial shot of a dreamy fluffy fuzzy knit buttoned cardigan in pastel cloud lavender and soft pink gradient worn with high waisted light wash jeans." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnRNTBf8UtRoC5hu_z7TNmNcIJPiVumtMu1XBDxGJFK-KYi520cXO-haHzQxO819B-0NGU4QjQK9y1n9Bsyc2Eex1ny7QbNmSrgpT5IllFC-Zg9X7YsTXlrIKR7o6-v02kfd8QqLVBQupveInWAnFfjk_fTT4W-bhKoEvC0O3SLROiaE2bCt2MI-Gnxgbic1IOzVD78EdoadTDmz455hu0Cpq505PvGyaGdvwqhr9iy84z0yPchIySGA"/>
+<!-- Badges -->
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold shadow-sm">Tendencia ⚡</span>
+</div>
+<!-- Wishlist Heart Button -->
+<button class="absolute top-2 right-2 w-9 h-9 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary shadow-sm transition-all active:scale-75" onclick="toggleFavorite(this)">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<!-- Content Meta -->
+<div class="flex flex-col gap-2 mt-3">
+<div class="flex items-center justify-between">
+<!-- Pastel Color Swatches -->
+<div class="flex items-center gap-1.5">
+<button class="w-3.5 h-3.5 rounded-full bg-primary-fixed-dim ring-2 ring-primary/40 focus:outline-none" title="Lavender"></button>
+<button class="w-3.5 h-3.5 rounded-full bg-secondary-fixed hover:opacity-80 transition-opacity" title="Blush Pink"></button>
+<button class="w-3.5 h-3.5 rounded-full bg-tertiary-fixed-dim hover:opacity-80 transition-opacity" title="Mint"></button>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">En Stock</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold line-clamp-1">Cardigan Cloud Fluffy</h3>
+<!-- Size Selector -->
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Talla:</span>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-primary-container text-on-primary" onclick="selectSize(this)">S</button>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-surface-variant" onclick="selectSize(this)">M</button>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-surface-variant" onclick="selectSize(this)">L</button>
+</div>
+<!-- Price & Buy Button -->
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$34.99</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">$48.00</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" onclick="addToBag(this, 'Cardigan Cloud Fluffy')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Añadir al Carrito</span>
+</button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="min-w-[260px] max-w-[260px] bg-surface-container-lowest rounded-xl p-space-sm shadow-md flex flex-col justify-between group">
+<div class="relative w-full h-64 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Trendy Gen Z fashion shot of a fitted baby tee in pastel soft mint green with pink sparkly butterfly graphic and 2000s glitter accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCqc1LASyJkoprAk6GbcT3fw1c0OjqPShVnUeqeMXs7lHB_AzYAcEHxoDETQimDLPrYb0nDZHVP8jyIhNNo3W0y9_fotmeXX3MtNX1RAeXqdZU6Lzf2FvioOoGdkvCaBYtRGWtC7WPl_qvUwjLErWYsyglupnuoV4HOU6_UzKv8J5nUqVVVYGD6V2xCYhxBsHbnV0SrpDYc-wEIu4UDSASkPd5Hj8RLJtivxD7PKocfqC7wK4UJV5niJA"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-2.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-label-sm text-label-sm font-bold shadow-sm">Nuevo Drop ✨</span>
+</div>
+<button class="absolute top-2 right-2 w-9 h-9 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary shadow-sm transition-all active:scale-75" onclick="toggleFavorite(this)">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 mt-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<button class="w-3.5 h-3.5 rounded-full bg-tertiary-fixed-dim ring-2 ring-tertiary/40"></button>
+<button class="w-3.5 h-3.5 rounded-full bg-surface-variant"></button>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-bold">¡Quedan 3!</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold line-clamp-1">Baby Tee Butterfly Dream</h3>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Talla:</span>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-surface-variant" onclick="selectSize(this)">XS</button>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-primary-container text-on-primary" onclick="selectSize(this)">S</button>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-surface-variant" onclick="selectSize(this)">M</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$22.50</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">$28.00</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" onclick="addToBag(this, 'Baby Tee Butterfly Dream')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Añadir al Carrito</span>
+</button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="min-w-[260px] max-w-[260px] bg-surface-container-lowest rounded-xl p-space-sm shadow-md flex flex-col justify-between group">
+<div class="relative w-full h-64 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="High quality lookbook photo of a pleated tennis mini skirt in delicate pastel lavender with side zip and aesthetic belt loop details." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeOw1EjsNcbEYb94FJwu97FTtToLKwwUhrJfrzkkpVj_Vg3yfkAWBKddOBzESx9rG697CS7VGiNXvBsI1_vbz82Qxcys0dBCAScdB5LQwCVuz6Dh4B-iIIO5GSAyz18Yf9JHkDCmj3J9xac6oCRL-IQHLQT2c-LIIvjp_HRYO6vNm_R4EmWhyxLmfosKgpWOL-8FUjdEWbFdY8W7E1G_xqkPjWL3Y0U091LNndktbSKNjG5st6I3NWsQ"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold shadow-sm">Top Ventas</span>
+</div>
+<button class="absolute top-2 right-2 w-9 h-9 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary shadow-sm transition-all active:scale-75" onclick="toggleFavorite(this)">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 mt-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<button class="w-3.5 h-3.5 rounded-full bg-primary-fixed ring-2 ring-primary/40"></button>
+<button class="w-3.5 h-3.5 rounded-full bg-surface-dim"></button>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">En Stock</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold line-clamp-1">Falda Plisada Pastel Lavender</h3>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Talla:</span>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-surface-variant" onclick="selectSize(this)">XS</button>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-surface-variant" onclick="selectSize(this)">S</button>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-primary-container text-on-primary" onclick="selectSize(this)">M</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$29.90</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">$38.00</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" onclick="addToBag(this, 'Falda Plisada Lavender')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Añadir al Carrito</span>
+</button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="min-w-[260px] max-w-[260px] bg-surface-container-lowest rounded-xl p-space-sm shadow-md flex flex-col justify-between group">
+<div class="relative w-full h-64 rounded-lg overflow-hidden bg-surface-container">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Aesthetic product model wearing relaxed wide leg baggy jeans in soft butter cream denim paired with minimal white sneakers on a pastel studio background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB846wenHS3-yTEk2xMOWY_BguYg79D6H5YfeEdapJFnH0yfSS5WkzNxJ2o_dtZWWq32pYKiyTJJ2GC-T2UbFpev06YY4h49yJCNMv4OQnRT0gN7FUF5HH7dIU4myBQNJeiWfXfs2DgV1F1m2j55dBW1oMSutrFtkxDZhQeRmLult4FVj2tnJEZQ0mjvAsauyPyHHeVUrbPdPh_AIzXScNg9NHOSyVXrPs8YfZjMBnCUltX65NkmhkTaQ"/>
+<div class="absolute top-2 left-2 flex flex-col gap-1">
+<span class="px-2.5 py-0.5 rounded-full bg-primary-fixed text-on-primary-fixed font-label-sm text-label-sm font-bold shadow-sm">Viral en TikTok</span>
+</div>
+<button class="absolute top-2 right-2 w-9 h-9 rounded-full bg-surface/80 backdrop-blur-md flex items-center justify-center text-on-surface hover:text-secondary shadow-sm transition-all active:scale-75" onclick="toggleFavorite(this)">
+<span class="material-symbols-outlined text-[20px]">favorite_border</span>
+</button>
+</div>
+<div class="flex flex-col gap-2 mt-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<button class="w-3.5 h-3.5 rounded-full bg-surface-container-highest ring-2 ring-primary/40"></button>
+<button class="w-3.5 h-3.5 rounded-full bg-primary-fixed-dim"></button>
+</div>
+<span class="font-label-sm text-label-sm text-tertiary font-bold">En Stock</span>
+</div>
+<h3 class="font-title-md text-title-md text-on-surface font-semibold line-clamp-1">Wide Leg Denim Butter Cream</h3>
+<div class="flex items-center gap-1.5">
+<span class="font-label-sm text-label-sm text-on-surface-variant mr-1">Talla:</span>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-primary-container text-on-primary" onclick="selectSize(this)">S</button>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-surface-variant" onclick="selectSize(this)">M</button>
+<button class="w-6 h-6 rounded-full text-[11px] font-bold flex items-center justify-center bg-surface-container-high text-on-surface-variant hover:bg-surface-variant" onclick="selectSize(this)">L</button>
+</div>
+<div class="flex items-center justify-between pt-1">
+<div class="flex items-baseline gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary font-bold">$44.00</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">$56.00</span>
+</div>
+</div>
+<button class="w-full py-2.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all" onclick="addToBag(this, 'Wide Leg Butter Cream')">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Añadir al Carrito</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- 5. Bloque Moodboard: Arma tu Outfit de la Semana -->
+<div class="w-full rounded-xl bg-surface-container-low p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-secondary font-bold uppercase tracking-wider">Curated Stylist Look</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Outfit de la Semana ✨</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Diseñado por el team Aura para tu próxima salida o café aesthetic.</p>
+</div>
+<div class="px-3 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold flex items-center gap-1 shrink-0">
+<span class="material-symbols-outlined text-[16px]">percent</span>
+<span>Pack -15%</span>
+</div>
+</div>
+<!-- Moodboard Grid Cards -->
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Main Look Preview -->
+<div class="relative rounded-lg overflow-hidden h-56 shadow-sm">
+<img class="w-full h-full object-cover" data-alt="Full body aesthetic photo of stylish young model wearing soft lilac cropped tee paired with relaxed cream parachute pants and pastel shoulder bag against minimal pastel building wall." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGYJVTAi5K2Hxk2KpTTdMJmduPETjP89gzs6C4SfMWC5aPk21zelJb0s6t_PHPpvURiB_C5iIJhXe8i5X5_l37oM2upuC6_P6UjbX71buT7Cz6IQOLc59STRHIQi1SYSC92IaBVPaSnTIKLiu6_XPDnHk0iRiqar97_7sT2F9MwUI3iEgrIbaiohpXQWbDV1ssMqeAhdVhOYWUoTGPNLdU-WPiSvZPpMClxHFeIur21kLFh8KSgHKqwg"/>
+<div class="absolute bottom-2 left-2 bg-surface/90 backdrop-blur-md px-2.5 py-1 rounded-full text-on-surface font-label-sm text-label-sm font-semibold">
+            Look Completo
+          </div>
+</div>
+<!-- Coordinated 2 sub items -->
+<div class="flex flex-col gap-space-sm justify-between">
+<div class="relative rounded-lg overflow-hidden h-26 bg-surface p-2 shadow-sm flex items-center gap-2">
+<img class="w-16 h-16 rounded-md object-cover shrink-0" data-alt="Detailed studio macro shot of silver pastel beaded choker necklace with pastel butterfly charms." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5TVg24rGvTo5ZrLEr4gF4W05Byz-gN2f87EiMiszJFG4IDJoXhzkpCfMtiocx1Oz1daBK1u3wb638wJ36FV-lFjwYuwx7BFWzOO3vAUtDhio0GjqGaQwlNvJ3YgksdbQcQqFuUyuCsCm1JHfFbSRdcIxZFmag0bfsOzwbbxk1RjR6i184Q-h_Hn6w-aJm360PFmblk6I7FspUENzpmwWO-YB7ldJvcNB_Jz63sS2l1IlUmM5dBO2gpA"/>
+<div class="flex flex-col min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface font-bold truncate">Choker Butterfly Y2K</p>
+<span class="font-label-sm text-label-sm text-primary font-bold">$12.00</span>
+<span class="text-[10px] text-tertiary">Incluido en pack</span>
+</div>
+</div>
+<div class="relative rounded-lg overflow-hidden h-26 bg-surface p-2 shadow-sm flex items-center gap-2">
+<img class="w-16 h-16 rounded-md object-cover shrink-0" data-alt="Chic pastel lilac mini shoulder bag with fluffy cloud handle resting on marble table." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6dH-RbZ-VqZ3_74zMth0GluGdnyVBHRkKvYnCDH6VJmvb1Sy5selzUQ0xbbQy__FdtElXXz_lIEsMKmxSTWeWY6Cm1xdTUngEgy_4azPySw_qQ1Stnpf3ynhx3S2XRogl63sr75ywqwfoXqinCiwn3SMm2JNATwhRPwlYy_-PQNr7mT78iS5czsL-5OgPynFcj9Cziu_Qvwpp-DS4vc-_P2y-ajRor_X2-ZNrw5jlhVxl8PI0XYvEAw"/>
+<div class="flex flex-col min-w-0">
+<p class="font-label-sm text-label-sm text-on-surface font-bold truncate">Cloud Mini Bag Lilac</p>
+<span class="font-label-sm text-label-sm text-primary font-bold">$26.00</span>
+<span class="text-[10px] text-tertiary">Incluido en pack</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Bundle CTA -->
+<div class="flex items-center justify-between pt-2">
+<div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Precio total del look:</span>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-on-surface font-bold">$79.90</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-through">$94.00</span>
+</div>
+</div>
+<button class="px-space-md py-3 rounded-full bg-secondary text-on-secondary font-label-md text-label-md font-bold shadow-md hover:opacity-95 active:scale-95 transition-all flex items-center gap-2" onclick="addBundle(this)">
+<span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+<span>Comprar Look (-15%)</span>
+</button>
+</div>
+</div>
+<!-- 6. Banner Promocional Flash Sale con Temporizador -->
+<div class="relative w-full rounded-xl bg-gradient-to-r from-primary-fixed via-secondary-fixed to-surface-container-high p-space-md overflow-hidden shadow-lg">
+<div class="relative z-10 flex flex-col gap-space-sm items-center text-center">
+<span class="px-3 py-1 rounded-full bg-surface/90 text-primary font-label-sm text-label-sm font-bold shadow-sm uppercase tracking-wider">
+          ⏰ Flash Sale de Medianoche
+        </span>
+<h2 class="font-headline-md text-headline-md text-on-surface font-bold tracking-tight">
+          Rebajas de Primavera 🌸
+        </h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs">
+          Hasta 40% OFF en tops seleccionados y accesorios coquette. ¡Las unidades vuelan!
+        </p>
+<!-- Live Interactive Countdown -->
+<div class="flex items-center gap-2 my-1">
+<div class="flex flex-col items-center bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm min-w-[50px]">
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="countdown-hours">04</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Horas</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">:</span>
+<div class="flex flex-col items-center bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm min-w-[50px]">
+<span class="font-headline-sm text-headline-sm text-primary font-bold" id="countdown-mins">22</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Min</span>
+</div>
+<span class="font-headline-sm text-headline-sm text-primary font-bold">:</span>
+<div class="flex flex-col items-center bg-surface/90 backdrop-blur-md px-3 py-1.5 rounded-lg shadow-sm min-w-[50px]">
+<span class="font-headline-sm text-headline-sm text-secondary font-bold" id="countdown-secs">15</span>
+<span class="text-[10px] uppercase font-bold text-on-surface-variant">Seg</span>
+</div>
+</div>
+<button class="w-full sm:w-auto px-space-xl py-3 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg font-bold shadow-md hover:bg-primary active:scale-95 transition-all mt-1">
+          Aprovechar Rebajas Ahora
+        </button>
+</div>
+</div>
+<!-- 7. Social Proof & Reviews de la Comunidad Gen Z -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-label-sm text-label-sm text-primary font-bold uppercase tracking-wider">#AuraBloomBabes</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Amado por la Comunidad 💕</h2>
+</div>
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-label-sm text-label-sm text-on-surface font-bold">4.9 / 5</span>
+</div>
+</div>
+<!-- Testimonial Cards Carousel -->
+<div class="flex gap-space-sm overflow-x-auto pb-space-xs -mx-margin px-margin scrollbar-none">
+<!-- Review 1 -->
+<div class="min-w-[270px] max-w-[270px] bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "El Cardigan Cloud llegó en 2 días y la textura es súper suavecita, idéntico a los videos de TikTok 🥺✨ ¡Obsesionada!"
+            </p>
+</div>
+<div class="flex items-center gap-2.5 mt-3 pt-2">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Avatar photo of smiling fashionable teen girl wearing pastel lilac beanie and minimal earrings." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFC0Xsw7xWtRxKyncgqYCXz1YEQNrYV_wzB4LzGd86vLGUn9eOzRv-ItrRiL3ZruMze_D6LY2h5aqMUndtwMP12Z-o0dn3RaEhIkTbEIlGj4P4s7cyyt4rBp3PvBHSooHY6U17oITsViYw1Jwxwksc61hHuA5-zQ-DJTgPied1PqPk4TSI-TrplBcIx7d_FFqcQUJAJN1wRjw7eSuTNnCoAH7QZ1G8JksdXcLCQbwTrV671obr4vmspQ"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">@valentinastyle</span>
+<span class="text-[10px] text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Compradora verificada
+              </span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="min-w-[270px] max-w-[270px] bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "Los pantalones parachutes tienen la caída perfecta. Calzan 10/10 en cintura y el color menta pastel es precioso."
+            </p>
+</div>
+<div class="flex items-center gap-2.5 mt-3 pt-2">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Avatar photo of stylish young girl taking selfie in modern mirror holding coffee cup wearing cute trendy pastel clothes." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3DI4gxpoouzREUiJl2WY-QB38SasNNLF6HlLiUNLPKylLUREJuAcLBMv_eK83nrxP7cn9MFN5K52toFDUcmKyqEfGonZxetRFZU7UXBOH0PXrSyrIm8d7vx636TWXrGM5ULU5FNEiqH4NWYqdMcTwxzDAjZgxvEHS4MuMxrp-33iDhG7YPI0U5bz0YpQFnnS-P5mtBnq09ANcz1_UO7-fe_l07pK0WZD2OuieI3UDE6OX7_TgTvQnqA"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">@camila.vibe</span>
+<span class="text-[10px] text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Compradora verificada
+              </span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="min-w-[270px] max-w-[270px] bg-surface-container rounded-xl p-space-md shadow-sm flex flex-col justify-between">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface italic">
+              "El empaque viene perfumado con stickers hermosos y una postal con playlist. La experiencia entera es puro amor 💖"
+            </p>
+</div>
+<div class="flex items-center gap-2.5 mt-3 pt-2">
+<img class="w-9 h-9 rounded-full object-cover" data-alt="Avatar photo of a happy creative Gen Z girl smiling outdoors with natural pastel makeup." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLty48ary25-IXSHJ5PltBR1kimSXp1y67Sw6HcLWEnnglzur1MzLofvRMuLMoejETNJuK-VycRFgMJ2eqE8IdaP2Wzmkmchmc-PaohUY_Aw8Ia0E1alM1W47_gGsVOv0v-vQfjlYjvxSSGJsV6a3_n0iI6PHk3JjNnbktBUPs72zYR3L0YryOPHI0SToPn6zyHbMZjOXKCJLtNp2vN50FFwrysZds0Z6wGF6eYel0324cyfoNzBL1pw"/>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm font-bold text-on-surface">@sofia_dream</span>
+<span class="text-[10px] text-tertiary flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">verified</span> Compradora verificada
+              </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- 8. Footer Completo y Moderno -->
+<div class="w-full rounded-xl bg-surface-container p-space-md shadow-sm flex flex-col gap-space-md mt-space-sm mb-space-md">
+<!-- Newsletter Signup -->
+<div class="flex flex-col gap-space-xs text-center">
+<div class="w-10 h-10 rounded-full bg-primary-fixed text-primary mx-auto flex items-center justify-center">
+<span class="material-symbols-outlined text-[22px]">mail</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface">Únete al Bloom Club</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-xs mx-auto">
+          Recibe acceso anticipado a secretos de drops, cupones flash y curated playlists mensuales.
+        </p>
+<form class="relative w-full max-w-sm mx-auto mt-2" onsubmit="handleNewsletter(event, this)">
+<input class="w-full py-3.5 pl-4 pr-12 rounded-full bg-surface-container-lowest text-on-surface placeholder:text-on-surface-variant/60 font-body-sm text-body-sm focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" placeholder="Tu correo electrónico..." required="" type="email"/>
+<button class="absolute right-1.5 top-1.5 bottom-1.5 w-10 rounded-full bg-primary-container text-on-primary flex items-center justify-center hover:bg-primary active:scale-90 transition-all shadow-sm" type="submit">
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+</form>
+<span class="font-label-sm text-label-sm text-tertiary hidden mt-1" id="newsletter-feedback">¡Te has unido con éxito! Revisa tu bandeja 💌</span>
+</div>
+<!-- Quick Helpful Links -->
+<div class="grid grid-cols-2 gap-space-md pt-space-xs">
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Ayuda &amp; Soporte</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Ayuda &amp; FAQ</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Guía de Tallas Interactiva</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Envíos y Devoluciones Gratis</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Rastrear mi Pedido</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-sm text-label-sm font-bold text-on-surface uppercase tracking-wider">Sobre Aura</span>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Manifiesto de Moda Sostenible</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Trabaja con Nosotras</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Programa de Creadoras Y2K</a>
+<a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" href="#">Puntos de Venta Pop-up</a>
+</div>
+</div>
+<!-- Social Media Strip (Aesthetic Gen Z Platforms) -->
+<div class="flex flex-col items-center gap-space-sm pt-2">
+<span class="font-label-sm text-label-sm text-on-surface-variant">Conéctate en nuestras redes:</span>
+<div class="flex items-center gap-space-sm">
+<a class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:text-secondary shadow-sm active:scale-95 transition-all" href="#" title="TikTok">
+<span class="font-label-md text-label-md font-bold">TT</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:text-secondary shadow-sm active:scale-95 transition-all" href="#" title="Instagram">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:text-secondary shadow-sm active:scale-95 transition-all" href="#" title="Pinterest">
+<span class="material-symbols-outlined text-[20px]">push_pin</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container-lowest text-on-surface flex items-center justify-center hover:text-primary shadow-sm active:scale-95 transition-all" href="#" title="Spotify Playlist">
+<span class="material-symbols-outlined text-[20px]">graphic_eq</span>
+</a>
+</div>
+</div>
+<!-- Trust Badges & Copyright -->
+<div class="flex flex-col items-center gap-2 pt-space-xs text-center">
+<div class="flex items-center gap-3 text-on-surface-variant text-[12px]">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-tertiary">lock</span> Pago 100% Seguro</span>
+<span>•</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-primary">autorenew</span> Devolución 30 Días</span>
+</div>
+<p class="font-label-sm text-label-sm text-on-surface-variant/70">
+          © 2025 Aura Bloom Inc. Todos los derechos reservados. Diseñado para almas creativas.
+        </p>
+</div>
+</div>
+</div>
+<!-- Toast Notification Overlay for Add-to-bag feedback -->
+<div class="fixed bottom-20 left-1/2 -translate-x-1/2 z-50 bg-inverse-surface text-inverse-on-surface px-4 py-2.5 rounded-full shadow-2xl flex items-center gap-2 pointer-events-none transition-all duration-300 opacity-0 translate-y-4" id="toast-notification">
+<span class="material-symbols-outlined text-[18px] text-tertiary-fixed">check_circle</span>
+<span class="font-label-md text-label-md font-semibold" id="toast-text">¡Añadido al carrito con éxito! ✨</span>
+</div>
+</div>
+<script>
+  // Dynamic Wishlist Toggle
+  function toggleFavorite(btn) {
+    const icon = btn.querySelector('.material-symbols-outlined');
+    const isFilled = icon.innerText === 'favorite';
+    
+    if (isFilled) {
+      icon.innerText = 'favorite_border';
+      icon.style.fontVariationSettings = "'FILL' 0";
+      btn.classList.remove('text-secondary');
+      btn.classList.add('text-on-surface');
+    } else {
+      icon.innerText = 'favorite';
+      icon.style.fontVariationSettings = "'FILL' 1";
+      btn.classList.add('text-secondary');
+      btn.classList.remove('text-on-surface');
+      
+      // Heart pop animation
+      btn.classList.add('scale-125');
+      setTimeout(() => btn.classList.remove('scale-125'), 200);
+    }
+  }
+
+  // Interactive Size Selection
+  function selectSize(btn) {
+    const parent = btn.parentElement;
+    parent.querySelectorAll('button').forEach(b => {
+      b.classList.remove('bg-primary-container', 'text-on-primary');
+      b.classList.add('bg-surface-container-high', 'text-on-surface-variant');
+    });
+    btn.classList.remove('bg-surface-container-high', 'text-on-surface-variant');
+    btn.classList.add('bg-primary-container', 'text-on-primary');
+  }
+
+  // Add to Bag with Toast Micro-interaction
+  function addToBag(btn, productName) {
+    const originalText = btn.innerHTML;
+    btn.innerHTML = `<span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span><span>Añadiendo...</span>`;
+    btn.disabled = true;
+
+    setTimeout(() => {
+      btn.innerHTML = `<span class="material-symbols-outlined text-[18px]">done</span><span>¡Listo! ✨</span>`;
+      btn.classList.remove('bg-primary');
+      btn.classList.add('bg-tertiary');
+
+      showToast(`¡${productName} añadido al carrito! 💕`);
+
+      setTimeout(() => {
+        btn.innerHTML = originalText;
+        btn.classList.remove('bg-tertiary');
+        btn.classList.add('bg-primary');
+        btn.disabled = false;
+      }, 1600);
+    }, 450);
+  }
+
+  // Bundle Add Function
+  function addBundle(btn) {
+    showToast(`¡Outfit Completo añadido con -15%! 🎉`);
+    btn.classList.add('scale-95');
+    setTimeout(() => btn.classList.remove('scale-95'), 200);
+  }
+
+  // Toast Trigger Helper
+  function showToast(message) {
+    const toast = document.getElementById('toast-notification');
+    const toastText = document.getElementById('toast-text');
+    if (!toast || !toastText) return;
+
+    toastText.innerText = message;
+    toast.classList.remove('opacity-0', 'translate-y-4');
+    toast.classList.add('opacity-100', 'translate-y-0');
+
+    setTimeout(() => {
+      toast.classList.remove('opacity-100', 'translate-y-0');
+      toast.classList.add('opacity-0', 'translate-y-4');
+    }, 2400);
+  }
+
+  // Scroll Horizontal Carousel Helper
+  function scrollCarousel(elementId, distance) {
+    const container = document.getElementById(elementId);
+    if (container) {
+      container.scrollBy({ left: distance, behavior: 'smooth' });
+    }
+  }
+
+  // Category Selection Feedback
+  function selectCategory(button) {
+    const carousel = document.getElementById('categories-carousel');
+    carousel.querySelectorAll('button div').forEach(ring => {
+      ring.classList.remove('bg-gradient-to-tr', 'from-primary', 'to-secondary-container');
+      ring.classList.add('bg-surface-variant');
+    });
+    const activeRing = button.querySelector('div');
+    if (activeRing) {
+      activeRing.classList.remove('bg-surface-variant');
+      activeRing.classList.add('bg-gradient-to-tr', 'from-primary', 'to-secondary-container');
+    }
+  }
+
+  // Flash Sale Dynamic Timer Loop
+  let totalSeconds = 4 * 3600 + 22 * 60 + 15;
+  const hEl = document.getElementById('countdown-hours');
+  const mEl = document.getElementById('countdown-mins');
+  const sEl = document.getElementById('countdown-secs');
+
+  setInterval(() => {
+    if (totalSeconds > 0) {
+      totalSeconds--;
+      const hours = Math.floor(totalSeconds / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+
+      if (hEl) hEl.innerText = String(hours).padStart(2, '0');
+      if (mEl) mEl.innerText = String(minutes).padStart(2, '0');
+      if (sEl) sEl.innerText = String(seconds).padStart(2, '0');
+    }
+  }, 1000);
+
+  // Newsletter Submission
+  function handleNewsletter(e, form) {
+    e.preventDefault();
+    const feedback = document.getElementById('newsletter-feedback');
+    if (feedback) feedback.classList.remove('hidden');
+    form.reset();
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/85 backdrop-blur-xl shadow-[0_-4px_20px_rgba(147,51,234,0.08)]" data-active-classes="text-primary font-label-md"><div class="flex justify-around items-center h-16 px-space-xs"><a aria-current="page" class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] px-2 py-1 transition-colors active:scale-95 text-primary font-label-md" data-path="inicio" href="#"><span class="material-symbols-outlined text-[24px]">home</span><span class="font-label-sm text-label-sm">Inicio</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant transition-colors hover:text-primary active:scale-95" data-path="explorar" href="#"><span class="material-symbols-outlined text-[24px]">grid_view</span><span class="font-label-sm text-label-sm">Explorar</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant transition-colors hover:text-primary active:scale-95" data-path="tendencias" href="#"><span class="material-symbols-outlined text-[24px]">local_fire_department</span><span class="font-label-sm text-label-sm">Drops</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant transition-colors hover:text-primary active:scale-95" data-path="favoritos" href="#"><span class="material-symbols-outlined text-[24px]">favorite_border</span><span class="font-label-sm text-label-sm">Favoritos</span></a><a class="flex flex-col items-center justify-center gap-0.5 min-w-[44px] min-h-[44px] px-2 py-1 text-on-surface-variant transition-colors hover:text-primary active:scale-95" data-path="perfil" href="#"><span class="material-symbols-outlined text-[24px]">account_circle</span><span class="font-label-sm text-label-sm">Perfil</span></a></div></nav></body></html>
